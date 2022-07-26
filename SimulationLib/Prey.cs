@@ -1,25 +1,34 @@
-﻿namespace SimulationLib
+﻿using SimulationLib.Interfaces;
+
+namespace SimulationLib
 {
     public class Prey : Cell
     {
 
         public const char defaultPreyImage = 'f';
-        protected int timeToReproduce = 6;
+        protected int _timeToReproduce = 6;
         protected int lastIterationNumber = 0;
 
-        public Prey(Coordinate offset, Ocean ocean, int timeToProcreate) : base(offset, ocean)
+        protected IDirection dir;
+
+
+        public Prey(Coordinate offset, ICell ocean, int timeToProcreate) : base(offset, ocean)
         {
-            timeToReproduce = timeToProcreate;
-            image = defaultPreyImage;
+            _timeToReproduce = timeToProcreate;
+            image = Variable.defaultPreyImage;
+
             wasNotProcessed = false;
+
+            dir = new ParticipantsDirection(ocean);
         }
 
-        public virtual Prey Reproduce(Coordinate location)
+
+        protected virtual Prey Reproduce(Coordinate coord)
         {
-            if (location != null)
+            if (coord != null)
             {
-                Prey newborn = new Prey(location, Ocean1, Variable.TimeToReproduce);
-                timeToReproduce = Variable.TimeToReproduce;
+                Prey newborn = new Prey(coord, ocean, 6);
+                _timeToReproduce = 6;
 
                 return newborn;
             }
@@ -29,32 +38,32 @@
             }
         }
 
-        protected virtual void Move(Coordinate oldLocation, Coordinate newLocation, int iteration)
+        protected virtual void Move(Coordinate oldCoord, Coordinate newCoord, int iteration)
         {
             if (iteration != lastIterationNumber)
             {
-                timeToReproduce--;
+                _timeToReproduce--;
                 lastIterationNumber = iteration;
             }
 
-            if (timeToReproduce <= 0)
+            if (_timeToReproduce <= 0)
             {
-                Ocean1.AssignCellAt(oldLocation, Reproduce(oldLocation));
+                AssignCellAt(oldCoord, Reproduce(oldCoord));
             }
             else
             {
-                Ocean1.AssignCellAt(oldLocation, new Cell(oldLocation, Ocean1));
+                AssignCellAt(oldCoord, new Cell(oldCoord, ocean));
             }
-            Ocean1.AssignCellAt(newLocation, new Prey(newLocation, Ocean1, timeToReproduce));
+            AssignCellAt(newCoord, new Prey(newCoord, ocean, _timeToReproduce));
         }
 
-        public override void Process (int iteration)
+        public override void Process(int iteration)
         {
             if (wasNotProcessed == true)
             {
-                if (Ocean1.GetEmptyNeighborCoord(Offset) != Offset)
+                if (dir.GetEmptyNeighborCoord(OffSet) != OffSet)
                 {
-                    Move(Offset, Ocean1.GetEmptyNeighborCoord(Offset), iteration);
+                    Move(OffSet, dir.GetEmptyNeighborCoord(OffSet), iteration);
                 }
             }
         }
