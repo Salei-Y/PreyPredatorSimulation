@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SimulationLib.AddCell">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAEAQAAAAAAAQAAAGAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>AddCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationLib.Cell">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAIgAAAAAAEAIAABAAAAAgAAAACAA=</HashCode>
+      <FileName>Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationLib.Coordinate">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Coordinate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationLib.Obstacle">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Obstacle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationLib.Ocean" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEAEgBgQAIAIoAAAQGAAAAgAAIAASACAAAAAI=</HashCode>
+      <FileName>Ocean.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.221" Collapsed="true" />
+  </Class>
+  <Class Name="SimulationLib.ParticipantsDirection" BaseTypeListCollapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBEAEQAIAAQAAQAAAAQABAAAAAAAAAAIAAYAAAAAAIA=</HashCode>
+      <FileName>ParticipantsDirection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SimulationLib.Predator">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAICAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Predator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationLib.Prey">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAAEAAAAgAAAABAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Prey.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationLib.Randomize">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Randomize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimulationLib.Variable">
+    <Position X="11.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAEAAAAAEAAAIAAAAAEAAEAAAAIAASACIIAAQA=</HashCode>
+      <FileName>Variable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SimulationLib.Interfaces.ICell">
+    <Position X="11.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAIAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICell.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimulationLib.Interfaces.IConsoleView">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAABAAAAAAAACABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IConsoleView.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimulationLib.Interfaces.IDirection">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDirection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimulationLib.Interfaces.IDisplayElements">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDisplayElements.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SimulationLib.Interfaces.IEnterData">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgQAAgAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Interfaces\IEnterData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

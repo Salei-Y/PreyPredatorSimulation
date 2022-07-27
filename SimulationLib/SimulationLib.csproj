@@ -65,5 +65,8 @@
     <Compile Include="Randomize.cs" />
     <Compile Include="Variable.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="LibraryDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
