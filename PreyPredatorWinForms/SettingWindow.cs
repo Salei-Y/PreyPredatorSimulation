@@ -40,7 +40,7 @@ namespace PreyPredatorWinForms
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            MainWindow ocean = new MainWindow();;
+            MainWindow ocean = new MainWindow();
 
             SetData(ocean, numIterationsTextBox, numObstaclesTextBox, numPredatorsTextBox, numPreysTextBox);
             this.Opacity = 0.0;
